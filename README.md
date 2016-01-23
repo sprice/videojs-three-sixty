@@ -9,8 +9,8 @@ Include `three.js` and `DeviceOrientationControls.js`[0] along with `video.js`.
 ```js
   var player = videojs('example-video');
   player.ThreeSixty({
-    width: 1920,             // Video width
-    height: 1080,            // Video height
+    width: 1280,             // Renered screen width
+    height: 720,            // Rendered screen height
     projection: 'cube_map',  // Allowed values are `equirectangular` and `cube_map`
     edge: 540                // When using `cube_map`, the length of the cube edge
   });
