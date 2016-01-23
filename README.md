@@ -10,7 +10,7 @@ Include `three.js` and [DeviceOrientationControls.js](https://github.com/sprice/
   var player = videojs('example-video');
   player.ThreeSixty({
     width: 1280,             // Renered screen width
-    height: 720,            // Rendered screen height
+    height: 720,             // Rendered screen height
     projection: 'cube_map',  // Allowed values are `equirectangular` and `cube_map`
     edge: 540                // When using `cube_map`, the length of the cube edge
   });
