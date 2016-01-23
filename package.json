@@ -1,0 +1,44 @@
+{
+  "name": "videojs-three-sixty",
+  "version": "1.0.0",
+  "description": "A 360 degree spherical video plugin for Video.js",
+  "main": "dist/videojs-three-sixty.min.js",
+  "scripts": {
+    "build": "npm run build-dist; npm run uglify",
+    "build-dist": "mkdir -p dist/ && ./node_modules/.bin/browserify ./src/videojs-three-sixty.js  -o dist/videojs-three-sixty.js",
+    "uglify": "./node_modules/.bin/uglifyjs dist/videojs-three-sixty.js --compress -o dist/videojs-three-sixty.min.js"
+  },
+  "keywords": [
+    "videojs",
+    "360",
+    "spherical",
+    "vr"
+  ],
+  "author": "Shawn Price",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "detector-webgl": "^2.0.0",
+    "device-orientation-controls": "sprice/device-orientation-controls"
+  },
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.1.0",
+    "browserify-shim": "^3.8.10",
+    "jquery": "^2.2.0",
+    "three": "^0.73.2",
+    "uglify-js": "^2.6.1",
+    "videojs": "^4.12.15"
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "video.js": "global:videojs",
+    "three.js": "global:THREE",
+    "jquery": "global:jQuery",
+    "DeviceOrientationController": "global:DeviceOrientationController"
+  }
+}
