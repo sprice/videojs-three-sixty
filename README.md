@@ -4,7 +4,7 @@ A Video.js plugin for 360 degree spherical video.
 
 ## Usage
 
-Include `three.js` and `DeviceOrientationControls.js`[0] along with `video.js`.
+Include `three.js` and [DeviceOrientationControls.js](https://github.com/sprice/device-orientation-controls) along with `video.js`.
 
 ```js
   var player = videojs('example-video');
@@ -15,8 +15,6 @@ Include `three.js` and `DeviceOrientationControls.js`[0] along with `video.js`.
     edge: 540                // When using `cube_map`, the length of the cube edge
   });
 ```
-
-[0] [DeviceOrientationControls.js](https://github.com/sprice/device-orientation-controls)
 
 ## Cube map
 
